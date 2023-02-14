@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
       maven "M3"
-        jdk "JDK11"
+      jdk "JDK11"
     }
   
   stages {
@@ -18,7 +18,7 @@ pipeline {
       
       steps {
         echo 'Maven build'
-        sh 'mvn -Dmaven.test.failure.ignore-true clean packge'
+        sh 'mvn -Dmaven.test.failure.ignore-true clean package'
       }
     }
       stage('Docker image') {
