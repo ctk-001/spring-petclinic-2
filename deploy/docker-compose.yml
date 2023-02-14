@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  aws17-spring-petclinic:
+    image: ${IMAGE}:${TAG}
+    container_name: aws17-spring-petclinic
+    ports:
+      - "8080:80808"
