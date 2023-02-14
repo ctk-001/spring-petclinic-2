@@ -39,6 +39,7 @@ pipeline {
             usePromotionTimestamp: false, 
             useWorkspaceInPromotion: false, 
             verbose: false)])
+           
           }
     }
     stage('Docker Image') {
