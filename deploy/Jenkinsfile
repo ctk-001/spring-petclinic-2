@@ -86,7 +86,7 @@ pipeline {
                 
         stage('============ Deploy workload ============') {
         when { expression { return params.DEPLOY_WORKLOAD } }
-        agent { label 'master' }
+        agent { label 'main' }
             steps {
                 echo "Run CodeDeploy with creating deployment"
                 script {
