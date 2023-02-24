@@ -86,6 +86,15 @@ pipeline {
                 
        stage('Codedeploy Workload') {
             steps {
+                echo "create Codedeploy group"   
+                sh '''
+                    aws deploy create-deployment-group \
+                    --application-name project04 \
+                    --auto-scaling-groups project04-autoscaling-group \
+                    --deployment-group-name CLIdeploygroup \
+                    --deployment-config-name CodeDeployDefault.OneAtATime \
+                    --service-role-arn project04-service-code-deploy-role
+                    '''
                 echo "Codedeploy Workload"   
                 sh '''
                     aws deploy create-deployment --application-name project04 \
