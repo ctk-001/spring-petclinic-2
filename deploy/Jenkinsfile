@@ -95,7 +95,7 @@ pipeline {
                     aws deploy create-deployment-group \
                     --application-name project04 \
                     --auto-scaling-groups project04-autoscaling-group \
-                    --deployment-group-name CLIdeploygroup \
+                    --deployment-group-name project04-deploy \
                     --deployment-config-name CodeDeployDefault.OneAtATime \
                     --service-role-arn arn:aws:iam::257307634175:role/project04-service-code-deploy-role
                     '''
