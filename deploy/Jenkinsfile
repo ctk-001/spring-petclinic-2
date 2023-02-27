@@ -102,7 +102,6 @@ pipeline {
                 echo "Codedeploy Workload"   
                 sh '''
                     aws deploy create-deployment --application-name project04 \
-                    --deployment-config-name CodeDeployDefault.OneAtATime \
                     --deployment-group-name project04-deploy \
                     --s3-location bucket=project04-codedeploy,bundleType=zip,key=deploy-1.0.zip
                     '''
